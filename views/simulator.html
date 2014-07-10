@@ -1,0 +1,384 @@
+<header class="navbar navbar-fixed-top navbar-inverse">
+    <div class="container-fluid head-main">
+      <div class="head" style="height:60px; width:100vw;">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+      <div class="navbar-collapse nav-collapse">
+        <ul class="nav navbar-nav">
+              <li class="head-title client-logo"><a href="#/"> <img src="{{stack.LogoPath}}" width="150px;"></a></li>
+              <li class="head-title"><a href="#/dashboard">Dashboard</a></li>
+              <li class="head-title title-active"><a href="#/simulator"  style="color:#fff;">Simulator</a></li>
+              <li class="head-title"><a href="#/scenarios">My Scenarios</a></li>
+
+        </ul>
+        <ul class="nav navbar-nav pull-right">
+          <li class="dropdown head-title">
+            <button style="margin:0px;" type="button" class="head-title btn dropdown-toggle">
+              Hi {{stack.ClientName}} <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">Logout</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    </div>
+</header>
+
+<div class="container" ng-controller="allProjectsCtrl">
+<link rel="stylesheet" href="/styles/bootstrap.css">
+<link rel="stylesheet" href="/styles/bootstrap-theme.css">
+<link rel="stylesheet" href="/styles/style.css">
+<link rel="stylesheet" href="/styles/font-awesome.min.css">
+    <div class="container" style=" margin:100px auto;float:none;">
+        <div class="container">
+       <div class="row header_cont">
+        <div class="project_name flo_lft"><h4>Laundry India 2014</h4></div>
+        <div class="tab_cont flo_lft">
+          <ul class="list-unstyled">
+            <li class="btn main-tab tab_active">SURWD</li>
+            <li class="btn main-tab">RINPWD</li>
+            <li class="btn main-tab">SURWD</li>
+            <li class="btn main-tab">INDPWD</li>
+            <li class="btn main-tab">SURWD</li>
+            <li class="btn main-tab">SURWD</li>
+            <li class="btn main-tab">SURWD</li>
+            <li class="btn main-tab">SURWD</li>
+          </ul>
+        </div>
+        <button class="btn flo_rit gren">Save Scenario</button>
+       </div>
+       <div class="row">
+          <div class="col-md-8 grph_cont">
+            <div class="col-xs-8 col-sm-6 graph_sub_cont">
+              <div class="vol_val_text">Value Average</div>
+              <div class="top_grph_cont">
+                <div class="bar blue_b"></div>
+                <div class="bar gray_b"></div>
+              </div>
+              <div class="top_per_val">4%</div>
+            </div>
+            <div class="col-xs-8 col-sm-6 graph_sub_cont">
+              <div class="vol_val_text">Volume Average</div>
+              <div class="top_grph_cont">
+                <div class="bar blue_b"></div>
+                <div class="bar gray_b"></div>
+              </div>
+              <div class="top_per_val">4%</div>
+            </div>
+          </div>
+          <div class="col-md-8 dashboard_cont">
+            <div class="row dash_tab">
+              <div class="dash-tabs tab_active"> Price</div>
+              <div class="dash-tabs">Media</div>
+              <div class="dash-tabs">Distribution</div>
+              <div class="dash-tabs">Competitions</div>
+              <div class="dash-tabs">Launches</div>
+              <div class="dash-tabs">Promotions</div>
+              <div class="dash-tabs">Nonthing</div>
+            </div>
+            <div class="row dash_hder">
+              <div class="comb"><div class="comb_hdr_text">Combinations</div></div>
+              <div class="comb_hdr">self</div>
+              <div class="comb_hdr">Comp1</div>
+              <div class="comb_hdr">Comp2</div>
+              <div class="comb_hdr">Reset</div>
+              <div class="comb_hdr">Add</div>
+            </div>
+            <div class="dash">
+            <ul class="list-group combination_ul" id="asd">
+            <li class="list-group-item row combination">
+              <div class="glyphicon glyphicon-eye-open comb_eye"></div>
+              <div class="comb_name">Metro,large,AllFlavors </div>
+              <div class="input-group num_in">
+              <input type="number" name="self" id="self" min="0" max="100" step="1" value="2.1" class="mar"></div>
+              <div class="num_in">
+              <input type="number" name="comp1" id="comp2" min="0" max="100" step="1" value="2.1" class="mar"></div>
+              <div class="num_in">
+              <input type="number" name="comp2" id="comp2" min="0" max="100" step="1" value="2.1" class="mar"></div>
+              <div class="num_in">
+              <i class="glyphicon glyphicon-repeat mar" style="cursor: pointer;"></i></div>
+              <div class="num_in">
+              <i class="glyphicon glyphicon-plus mar" style="cursor: pointer;"></i></div>
+              <div class="eye_popup">
+                <div class="eye_comb_name">Metro,large,AllFlavors</div>
+                <div class="sub-eye">
+                  <div class="row dash_hder eye_sub_hdr">
+                    <div class="eye_comb_hdr">Market</div>
+                    <div class="eye_comb_hdr">Channel</div>
+                    <div class="eye_comb_hdr">Brand</div>
+                    <div class="eye_comb_hdr">Flavor</div>
+                    <div class="eye_comb_hdr">Pack Size</div>
+                    <div class="eye_comb_hdr">self</div>
+                    <div class="eye_comb_hdr">Comp1</div>
+                    <div class="eye_comb_hdr">Comp2</div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="list-group-item row combination">
+              <div class="glyphicon glyphicon-eye-open comb_eye"></div>
+              <div class="comb_name">Metro,large,AllFlavors </div>
+              <div class="input-group num_in">
+              <input type="number" name="self" id="self" min="0" max="100" step="1" value="2.1" class="mar"></div>
+              <div class="num_in">
+              <input type="number" name="comp1" id="comp2" min="0" max="100" step="1" value="2.1" class="mar"></div>
+              <div class="num_in">
+              <input type="number" name="comp2" id="comp2" min="0" max="100" step="1" value="2.1" class="mar"></div>
+              <div class="num_in">
+              <i class="glyphicon glyphicon-repeat mar" style="cursor: pointer;"></i></div>
+              <div class="num_in">
+              <i class="glyphicon glyphicon-plus mar" style="cursor: pointer;"></i></div>
+              <div class="eye_popup">
+                <div class="eye_comb_name">Metro,large,AllFlavors</div>
+                <div class="sub-eye">
+                  <div class="row dash_hder eye_sub_hdr">
+                    <div class="eye_comb_hdr">Market</div>
+                    <div class="eye_comb_hdr">Channel</div>
+                    <div class="eye_comb_hdr">Brand</div>
+                    <div class="eye_comb_hdr">Flavor</div>
+                    <div class="eye_comb_hdr">Pack Size</div>
+                    <div class="eye_comb_hdr">self</div>
+                    <div class="eye_comb_hdr">Comp1</div>
+                    <div class="eye_comb_hdr">Comp2</div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="list-group-item row combination">
+              <div class="glyphicon glyphicon-eye-open comb_eye"></div>
+              <div class="comb_name">Metro,large,AllFlavors </div>
+              <div class="input-group num_in">
+              <input type="number" name="self" id="self" min="0" max="100" step="1" value="2.1" class="mar"></div>
+              <div class="num_in">
+              <input type="number" name="comp1" id="comp2" min="0" max="100" step="1" value="2.1" class="mar"></div>
+              <div class="num_in">
+              <input type="number" name="comp2" id="comp2" min="0" max="100" step="1" value="2.1" class="mar"></div>
+              <div class="num_in">
+              <i class="glyphicon glyphicon-repeat mar" style="cursor: pointer;"></i></div>
+              <div class="num_in">
+              <i class="glyphicon glyphicon-plus mar" style="cursor: pointer;"></i></div>
+              <div class="eye_popup">
+                <div class="eye_comb_name">Metro,large,AllFlavors</div>
+                <div class="sub-eye">
+                  <div class="row dash_hder eye_sub_hdr">
+                    <div class="eye_comb_hdr">Market</div>
+                    <div class="eye_comb_hdr">Channel</div>
+                    <div class="eye_comb_hdr">Brand</div>
+                    <div class="eye_comb_hdr">Flavor</div>
+                    <div class="eye_comb_hdr">Pack Size</div>
+                    <div class="eye_comb_hdr">self</div>
+                    <div class="eye_comb_hdr">Comp1</div>
+                    <div class="eye_comb_hdr">Comp2</div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="list-group-item row combination">
+              <div class="glyphicon glyphicon-eye-open comb_eye"></div>
+              <div class="comb_name">Metro,large,AllFlavors </div>
+              <div class="input-group num_in">
+              <input type="number" name="self" id="self" min="0" max="100" step="1" value="2.1" class="mar"></div>
+              <div class="num_in">
+              <input type="number" name="comp1" id="comp2" min="0" max="100" step="1" value="2.1" class="mar"></div>
+              <div class="num_in">
+              <input type="number" name="comp2" id="comp2" min="0" max="100" step="1" value="2.1" class="mar"></div>
+              <div class="num_in">
+              <i class="glyphicon glyphicon-repeat mar" style="cursor: pointer;"></i></div>
+              <div class="num_in">
+              <i class="glyphicon glyphicon-plus mar" style="cursor: pointer;"></i></div>
+              <div class="eye_popup">
+                <div class="eye_comb_name">Metro,large,AllFlavors</div>
+                <div class="sub-eye">
+                  <div class="row dash_hder eye_sub_hdr">
+                    <div class="eye_comb_hdr">Market</div>
+                    <div class="eye_comb_hdr">Channel</div>
+                    <div class="eye_comb_hdr">Brand</div>
+                    <div class="eye_comb_hdr">Flavor</div>
+                    <div class="eye_comb_hdr">Pack Size</div>
+                    <div class="eye_comb_hdr">self</div>
+                    <div class="eye_comb_hdr">Comp1</div>
+                    <div class="eye_comb_hdr">Comp2</div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="list-group-item row combination">
+              <div class="glyphicon glyphicon-eye-open comb_eye"></div>
+              <div class="comb_name">Metro,large,AllFlavors </div>
+              <div class="input-group num_in">
+              <input type="number" name="self" id="self" min="0" max="100" step="1" value="2.1" class="mar"></div>
+              <div class="num_in">
+              <input type="number" name="comp1" id="comp2" min="0" max="100" step="1" value="2.1" class="mar"></div>
+              <div class="num_in">
+              <input type="number" name="comp2" id="comp2" min="0" max="100" step="1" value="2.1" class="mar"></div>
+              <div class="num_in">
+              <i class="glyphicon glyphicon-repeat mar" style="cursor: pointer;"></i></div>
+              <div class="num_in">
+              <i class="glyphicon glyphicon-plus mar" style="cursor: pointer;"></i></div>
+              <div class="eye_popup">
+                <div class="eye_comb_name">Metro,large,AllFlavors</div>
+                <div class="sub-eye">
+                  <div class="row dash_hder eye_sub_hdr">
+                    <div class="eye_comb_hdr">Market</div>
+                    <div class="eye_comb_hdr">Channel</div>
+                    <div class="eye_comb_hdr">Brand</div>
+                    <div class="eye_comb_hdr">Flavor</div>
+                    <div class="eye_comb_hdr">Pack Size</div>
+                    <div class="eye_comb_hdr">self</div>
+                    <div class="eye_comb_hdr">Comp1</div>
+                    <div class="eye_comb_hdr">Comp2</div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="list-group-item row combination">
+              <div class="glyphicon glyphicon-eye-open comb_eye"></div>
+              <div class="comb_name">Metro,large,AllFlavors </div>
+              <div class="input-group num_in">
+              <input type="number" name="self" id="self" min="0" max="100" step="1" value="2.1" class="mar"></div>
+              <div class="num_in">
+              <input type="number" name="comp1" id="comp2" min="0" max="100" step="1" value="2.1" class="mar"></div>
+              <div class="num_in">
+              <input type="number" name="comp2" id="comp2" min="0" max="100" step="1" value="2.1" class="mar"></div>
+              <div class="num_in">
+              <i class="glyphicon glyphicon-repeat mar" style="cursor: pointer;"></i></div>
+              <div class="num_in">
+              <i class="glyphicon glyphicon-plus mar" style="cursor: pointer;"></i></div>
+              <div class="eye_popup">
+                <div class="eye_comb_name">Metro,large,AllFlavors</div>
+                <div class="sub-eye">
+                  <div class="row dash_hder eye_sub_hdr">
+                    <div class="eye_comb_hdr">Market</div>
+                    <div class="eye_comb_hdr">Channel</div>
+                    <div class="eye_comb_hdr">Brand</div>
+                    <div class="eye_comb_hdr">Flavor</div>
+                    <div class="eye_comb_hdr">Pack Size</div>
+                    <div class="eye_comb_hdr">self</div>
+                    <div class="eye_comb_hdr">Comp1</div>
+                    <div class="eye_comb_hdr">Comp2</div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="list-group-item row combination">
+              <div class="glyphicon glyphicon-eye-open comb_eye"></div>
+              <div class="comb_name">Metro,large,AllFlavors </div>
+              <div class="input-group num_in">
+              <input type="number" name="self" id="self" min="0" max="100" step="1" value="2.1" class="mar"></div>
+              <div class="num_in">
+              <input type="number" name="comp1" id="comp2" min="0" max="100" step="1" value="2.1" class="mar"></div>
+              <div class="num_in">
+              <input type="number" name="comp2" id="comp2" min="0" max="100" step="1" value="2.1" class="mar"></div>
+              <div class="num_in">
+              <i class="glyphicon glyphicon-repeat mar" style="cursor: pointer;"></i></div>
+              <div class="num_in">
+              <i class="glyphicon glyphicon-plus mar" style="cursor: pointer;"></i></div>
+              <div class="eye_popup">
+                <div class="eye_comb_name">Metro,large,AllFlavors</div>
+                <div class="sub-eye">
+                  <div class="row dash_hder eye_sub_hdr">
+                    <div class="eye_comb_hdr">Market</div>
+                    <div class="eye_comb_hdr">Channel</div>
+                    <div class="eye_comb_hdr">Brand</div>
+                    <div class="eye_comb_hdr">Flavor</div>
+                    <div class="eye_comb_hdr">Pack Size</div>
+                    <div class="eye_comb_hdr">self</div>
+                    <div class="eye_comb_hdr">Comp1</div>
+                    <div class="eye_comb_hdr">Comp2</div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="list-group-item row combination">
+              <div class="glyphicon glyphicon-eye-open comb_eye"></div>
+              <div class="comb_name">Metro,large,AllFlavors </div>
+              <div class="input-group num_in">
+              <input type="number" name="self" id="self" min="0" max="100" step="1" value="2.1" class="mar"></div>
+              <div class="num_in">
+              <input type="number" name="comp1" id="comp2" min="0" max="100" step="1" value="2.1" class="mar"></div>
+              <div class="num_in">
+              <input type="number" name="comp2" id="comp2" min="0" max="100" step="1" value="2.1" class="mar"></div>
+              <div class="num_in">
+              <i class="glyphicon glyphicon-repeat mar" style="cursor: pointer;"></i></div>
+              <div class="num_in">
+              <i class="glyphicon glyphicon-plus mar" style="cursor: pointer;"></i></div>
+              <div class="eye_popup">
+                <div class="eye_comb_name">Metro,large,AllFlavors</div>
+                <div class="sub-eye">
+                  <div class="row dash_hder eye_sub_hdr">
+                    <div class="eye_comb_hdr">Market</div>
+                    <div class="eye_comb_hdr">Channel</div>
+                    <div class="eye_comb_hdr">Brand</div>
+                    <div class="eye_comb_hdr">Flavor</div>
+                    <div class="eye_comb_hdr">Pack Size</div>
+                    <div class="eye_comb_hdr">self</div>
+                    <div class="eye_comb_hdr">Comp1</div>
+                    <div class="eye_comb_hdr">Comp2</div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            </ul></div>
+          </div>
+          <div class="col-md-4 side_widgt portfolio_cont">
+            <div class="row port_heading_cont">
+              <div class="port-text port_size">Portfolio</div>
+              <div class="grap-idt port_size">
+                <div class="idt col_gr"></div><div class="b_text">Baseline</div>
+              </div>
+              <div class="grap-idt port_size">
+                <div class="idt col_bl"></div><div class="b_text">Scenario</div>
+              </div>
+            </div>
+            <div class="col-xs-8 col-sm-6 port_grph_sub_cont">
+              <div class="port_per_cont">4%</div>
+              <div class="port_bar_cont">
+                <div class="port_bar gray_b"></div>
+                <div class="port_bar blue_b"></div>
+              </div>
+              <div class="port_text_cont">Value Average</div>
+            </div>
+            <div class="col-xs-8 col-sm-6 port_grph_sub_cont">
+              <div class="port_per_cont">4%</div>
+              <div class="port_bar_cont">
+                <div class="port_bar gray_b"></div>
+                <div class="port_bar blue_b"></div>
+              </div>
+              <div class="port_text_cont">volume Average</div>
+            </div>
+          </div>
+          <div class="col-md-4 side_widgt pro_chang_cont">
+            <div id="prod" class="pro_chang_hedr active">Product Details</div>
+            <div id="chng" class="pro_chang_hedr inactive">Changed Combos</div>
+            <div id="pro_cont" class="pro_chang_box"></div>
+            <div id="chang_cont" class="pro_chang_box"></div>
+          </div>
+          <div class="col-md-8 fotter_cont">
+            <div id="ResetAllToBaseline" class="f_btn" style="margin-left:0">
+            <i class="glyphicon glyphicon-repeat"></i><i class="norm"> Reset all to Baseline</i></div>
+            <div id="CreateNewCombo" class="f_btn">
+            <i class="glyphicon glyphicon-file"></i><i class="norm"> Create New Combo</i></div>
+            <div id="AddNewCombo" class="f_btn">
+            <i class="glyphicon glyphicon-plus"></i><i class="norm"> Add New Combo</i></div>
+            <div id="PrintPDF" class="f_btn"><i class="glyphicon glyphicon-print"></i><i class="norm"> Print to PDF</i></div>
+          </div>
+       </div>
+       </div>
+       <div class="addCombo">
+
+       </div>
+       <div class="createCombo">
+
+       </div>
+       <div id="back_blur"></div>
+      </div>
+    </div>
+    <script type="text/javascript" src="assets/js/sim.js"></script>
+
+</div>

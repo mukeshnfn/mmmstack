@@ -1,0 +1,80 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro);
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direaction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  min-height: 100vh;
+  background: #fff;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+#signin {
+  padding: 1em;
+  margin: 1em;
+  border-radius: 1em;
+  text-align: center;
+  background: white;
+  color: rgba(0, 0, 0, 0.75);
+}
+#signin h1, #signin button {
+  font-weight: 300;
+  text-transform: uppercase;
+}
+#signin .error {
+  color: rgba(255, 0, 0, 0.4);;
+  text-shadow: 0 1px 0 rgba(255, 100, 100, 0.75);
+  margin-left: -1em;
+  margin-right: -1em;
+  margin-bottom: 1ex;
+  padding: 1ex;
+  display: none;
+}
+
+#signin input, #signin button {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 1.1em;
+  padding: 1ex;
+  border: 1px solid #c9c9c9;
+  transition: border ease 500ms;
+  border-radius: 5px;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #181818;
+}
+
+
+#signin input {
+  text-align:left;
+}
+
+
+#signin input:focus, #signin button:focus {
+  outline: none;
+  border: 2px solid #3498DB;
+}
+#signin input:not(:last-child), #signin button:not(:last-child) {
+  margin-bottom: 1ex;
+}
+#signin button {
+  color: white;
+  border: 2px solid #34495E;
+  background: #34495E;
+}
+#signin button:hover{
+ border: 2px solid #283949;
+ background: #283949; 
+}
+
+a.forgetPassword {
+    font-size:14px;
+    text-decoration:none;
+    color:#34495E;
+}
+

@@ -1,0 +1,133 @@
+<header class="navbar navbar-fixed-top navbar-inverse">
+    <div class="container-fluid head-main">
+      <div class="head" style="height:60px; width:100vw;">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+      <div class="navbar-collapse nav-collapse collapse">
+        <ul class="nav navbar-nav">
+              <li class="head-title client-logo"><a href="#/"> <img src="{{stack.LogoPath}}" width="150px;"></a></li>
+              <li class="head-title title-active"><a href="#/dashboard" style="color:#fff;">Dashboard</a></li>
+              <li class="head-title"><a href="#/simulator">Simulator</a></li>
+              <li class="head-title"><a href="#/scenarios">My Scenarios</a></li>
+
+        </ul>
+        <ul class="nav navbar-nav pull-right">
+          <li class="dropdown head-title">
+            <button type="button" class="head-title btn dropdown-toggle">
+              Hi {{stack.ClientName}} <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">Logout</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    </div>
+</header>
+
+<div class="container" ng-controller="allProjectsCtrl">
+        <div class="container" style=" margin:100px auto;float:none;">
+        <div class="row filter-panel" >
+          <div class="span12 filters">
+              <h4>Choose a Project</h4>
+          <hr>
+          <div class="row">
+            <div class="span3">
+              <section id="content" >
+              <!-- <input type="text" ng-model="projectCountry" autocomplete="off" placeholder="Country"
+               typeahead="country as country.CountryName for country in projects | unique:'CountryName' | filter:$viewValue"
+               typeahead-loading="loadingLocations"
+               class="form-control" ng-click="tabs[1].active = true">
+              <i ng-show="loadingLocations" class="glyphicon glyphicon-refresh"></i> -->
+              <select ng-model="projectCountry" ng-click="tabs[1].active = true" ng-options="country.CountryName for country in projects | unique:'CountryName'"><option value="">Country</option></select>
+            </section>
+            </div>
+            <div class="span3 no-mar">
+              <section id="content" >
+                <!-- <input type="text" ng-model="projectCatagory" autocomplete="off" placeholder="Catagory"
+                 typeahead="country as country.Catagory for country in projects | unique:'Catagory' | filter:$viewValue"
+                 typeahead-loading="loadingLocations"
+                 class="form-control" ng-click="tabs[1].active = true">
+                <i ng-show="loadingLocations" class="glyphicon glyphicon-refresh"></i> -->
+                <select ng-model="projectCatagory" ng-click="tabs[1].active = true" ng-options="country.Catagory for country in projects | unique:'Catagory' | filter:$viewValue"><option value="">Catagory</option></select>
+              </section>
+            </div>
+            <div class="span3 no-mar">
+              <section id="content" >
+                <!-- <input type="text" ng-model="prj.pro" autocomplete="off" placeholder="Project" typeahead="country as country.Project for country in projects | unique:'Project' | filter:$viewValue"
+                 typeahead-loading="loadingLocations" class="form-control" ng-click="tabs[1].active = true">
+                 <i ng-show="loadingLocations" class="glyphicon glyphicon-refresh"></i> -->
+                  <select ng-model="MainProject" ng-click="tabs[1].active = true" ng-options="country.Project for country in projects | unique:'Project' | filter:$viewValue"><option value="">Project</option></select>
+              </section>
+            </div>
+            <div class="span3 no-mar">
+              <section id="content" >
+                <!-- <input type="text"
+                 ng-model="prj.subpro" autocomplete="off" placeholder="Sub Project" typeahead="country as country.SubProject for country in projects | unique:'SubProject'"
+                 typeahead-loading="loadingLocations"  class="form-control" ng-click="tabs[1].active = true"><i ng-show="loadingLocations" class="glyphicon glyphicon-refresh"></i> -->
+                 <select ng-model="SubProject" ng-click="tabs[1].active = true" ng-options="country.SubProject for country in projects | unique:'SubProject' | filter:$viewValue"><option value="">Sub Project</option></select>
+              </section>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="row list-panel">
+
+          <div class="span12 lists">
+
+
+            <tabset>
+              <tab heading="Recent Projects" active="tabs[0].active">
+                <div class="tab-pane active" id="recent">
+                  <table class="table hp-table table-bordered table-striped">
+                    <tbody>
+                      <tr ng-repeat="project in recentProjects">
+                        <td><span class="">{{project.projectName}}</span></td>
+                        <td>{{project.DateTime}}</td>
+                        <td>
+                          <button type="button" class="btn dropdown-toggle" onclick="window.location.href='#/simulator'">
+                            Load <span class="caret"></span>
+                          </button>
+                          <!-- <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">Load</a></li>
+                          </ul> -->
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </tab>
+
+              <tab heading="Filtered Projects" active="tabs[1].active">
+                <div class="tab-pane filteredResults" id="filteredResults">
+                <table class="table hp-table table-bordered table-striped">
+                  <tbody>
+                    <tr ng-repeat="project in projects | filter:projectCountry|filter:projectCatagory|filter:MainProject|filter:SubProject">
+                      <td><span class="">{{project.projectName}}</span></td>
+                      <td>{{project.DateTime}}</td>
+                      <td style="display:none;">{{project.Country}}</td>
+                      <td>
+                        <div class="btn-group">
+                          <button type="button" class="btn dropdown-toggle" onclick="window.location.href='#/simulator'">
+                            Load <span class="caret"></span>
+                          </button>
+
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                </div>
+              </tab>
+            </tabset>
+
+
+        </div>
+        </div>
+
+        </div>
+      </div>
