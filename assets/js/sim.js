@@ -77,4 +77,7 @@ $(document).ready( function(){
 		$(".createcomboeditcont").css({"display":"none"});
 		$(this).parent().children(".createcomboeditcont").css({"display":"block"});
 	});
+	$(".create_delete_combo").click(function(){
+		$(this).parent().remove();
+	});
 });
