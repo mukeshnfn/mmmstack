@@ -20,7 +20,7 @@
               Hi {{stack.ClientName}} <span class="caret"></span>
             </button>
             <ul class="dropdown-menu" role="menu">
-              <li><button ng-click="logout()">Logout</button></li>
+              <li><button style="margin:0px" ng-click="logout()">Logout</button></li>
             </ul>
           </li>
         </ul>
@@ -50,7 +50,7 @@
             <li class="btn main-tab">SURWD</li>
           </ul>
         </div>
-        <button id="saveScenario" class="btn flo_rit gren">Save Scenario</button>
+        <button class="btn flo_rit gren">Save Scenario</button>
        </div>
        <div class="row">
           <div class="col-md-8 grph_cont">
@@ -116,24 +116,6 @@
                     <div class="eye_comb_hdr">self</div>
                     <div class="eye_comb_hdr">Comp1</div>
                     <div class="eye_comb_hdr">Comp2</div>
-                  </div>
-                  <div class="combo_options_cont">
-                     <div class="combo_option_shell">
-                      <div class="combo_option"></div>
-                      <div class="combo_option"></div>
-                      <div class="combo_option"></div>
-                     </div>
-                     <div class="combo_option_shell">
-                      <div class="combo_option"></div>
-                      <div class="combo_option"></div>
-                      <div class="combo_option"></div>
-                     </div>
-                     <div class="combo_option_shell"></div>
-                     <div class="combo_option_shell"></div>
-                     <div class="combo_option_shell"></div>
-                     <div class="combo_option_shell"></div>
-                     <div class="combo_option_shell"></div>
-                     <div class="combo_option_shell"></div>                   
                   </div>
                 </div>
               </div>
@@ -373,55 +355,9 @@
           </div>
           <div class="col-md-4 side_widgt pro_chang_cont">
             <div id="prod" class="pro_chang_hedr active">Product Details</div>
-            <div id="chng" class="pro_chang_hedr inactive"><div style="float:left;margin-left:10px">Changed Combos</div><apan class="badge color_fade">2</apan></div>
-            <div id="pro_cont" class="pro_chang_box">
-              <table class="pro_table">
-                <tr>
-                  <th>Product</th>
-                  <th>Value Average</th>
-                  <th>Volume Average</th>
-                </tr>
-                <tr>
-                  <td>SURFPW</td>
-                  <td>3.2%</td>
-                  <td>2.1%</td>
-                </tr>
-                <tr>
-                  <td>SURFPW</td>
-                  <td>3.2%</td>
-                  <td>2.1%</td>
-                </tr>
-                <tr>
-                  <td>SURFPW</td>
-                  <td>3.2%</td>
-                  <td>2.1%</td>
-                </tr>
-                <tr>
-                  <td>SURFPW</td>
-                  <td>3.2%</td>
-                  <td>2.1%</td>
-                </tr>
-              </table>
-                
-            </div>
-            <div id="chang_cont" class="pro_chang_box">
-              <table class="chng-comb">
-                <tr>
-                  <th>VAR</th>
-                  <th>Combination</th>
-                  <th>self</th>
-                  <th>comp1</th>
-                  <th>comp2</th>
-                </tr>
-                <tr>
-                  <td>Price</td>
-                  <td>Urben,Largepack</td>
-                  <td>3.2%</td>
-                  <td>2.1%</td>
-                  <td>1.1%</td>
-                </tr>
-              </table>
-            </div>
+            <div id="chng" class="pro_chang_hedr inactive">Changed Combos</div>
+            <div id="pro_cont" class="pro_chang_box"></div>
+            <div id="chang_cont" class="pro_chang_box"></div>
           </div>
           <div class="col-md-8 fotter_cont">
             <div id="ResetAllToBaseline" class="f_btn" style="margin-left:0">
@@ -434,196 +370,15 @@
           </div>
        </div>
        </div>
-       <div class="addCombocont">
-        <div class="addCombo">
-         <div class="addCombohdr">
-          <div class="addcombohdrtxt">Cobination List</div>
-         </div>
-         <div class="addCombotabCont">
-          <div id="addmmmrecom" class="addCombotabs addcomboaactive">MMM Recommended Combinations</div>
-          <div id="addmycombo" class="addCombotabs">My Combinations</div>
-         </div>
-         <div id="addMMMrecocont" class="addcombCont">
-          <ul class="list-group addcomboListhdr">
-            <li class="addcombolist"><div>Metro large pack</div>
-             <div class="addcombodetails">
-              <div class="addcomb_details_hdr">Combination Details</div>
-             </div>
-            </li>
-            <li class="addcombolist"><div>urban small pack apple</div>
-                    <div class="addcombodetails">
-                      <div class="addcomb_details_hdr">Combination Details</div>
-                    </div>
-            </li>
-            <li class="addcombolist"><div>rural allpack allflavers</div>
-                <div class="addcombodetails">
-                  <div class="addcomb_details_hdr">Combination Details</div>
-                </div>
-             </li>
-            <li class="addcombolist"><div>this a new combination</div>
-           <div class="addcombodetails">
-            <div class="addcomb_details_hdr">Combination Details</div>
-           </div>
-            </li>
-            <li class="addcombolist"><div>Metro large pack</div>
-                 <div class="addcombodetails">
-                  <div class="addcomb_details_hdr">Combination Details</div>
-                 </div>
-            </li>
-            <li class="addcombolist"><div>urban small pack apple</div>
-                 <div class="addcombodetails">
-                  <div class="addcomb_details_hdr">Combination Details</div>
-                 </div>
-            </li>
-            <li class="addcombolist"><div>rural allpack allflavers</div>
-                 <div class="addcombodetails">
-                  <div class="addcomb_details_hdr">Combination Details</div>
-                 </div>
-            </li>
-            <li class="addcombolist"><div>this a new combination</div>
-                 <div class="addcombodetails">
-                  <div class="addcomb_details_hdr">Combination Details</div>
-                 </div>
-            </li>
-            <li class="addcombolist"><div>Metro large pack</div>
-                 <div class="addcombodetails">
-                  <div class="addcomb_details_hdr">Combination Details</div>
-                 </div>
-            </li>
-            <li class="addcombolist"><div>urban small pack apple</div>
-                 <div class="addcombodetails">
-                  <div class="addcomb_details_hdr">Combination Details</div>
-                 </div>
-            </li>
-            <li class="addcombolist"><div>rural allpack allflavers</div>
-                 <div class="addcombodetails">
-                  <div class="addcomb_details_hdr">Combination Details</div>
-                 </div>
-            </li>
-            <li class="addcombolist"><div>this a new combination</div>
-                 <div class="addcombodetails">
-                  <div class="addcomb_details_hdr">Combination Details</div>
-                 </div>
-            </li>
-          </ul>
-         </div>
-         <div id="addmycombocont" class="addcombCont">
-          <ul class="list-group addcomboListhdr">
-            <li class="addcombolist"><div>Metro larrge pack</div><div class="addcombodetails">
-              <div class="addcomb_details_hdr">Combination Details</div>
-            </div></li>
-            <li class="addcombolist"><div>urban small pack apple</div><div class="addcombodetails">
-              <div class="addcomb_details_hdr">Combination Details</div>
-            </div></li>
-            <li class="addcombolist"><div>rural allpack allflavers</div><div class="addcombodetails">
-              <div class="addcomb_details_hdr">Combination Details</div>
-            </div></li>
-            <li class="addcombolist"><div>this is new combo</div><div class="addcombodetails">
-              <div class="addcomb_details_hdr">Combination Details</div>
-            </div></li>
-          </ul>
-         </div>
-        </div>
+       <div class="addCombo">
+
        </div>
-       <div class="creteCombocont">
-        <div class="createCombo">
-        <div class="addCombohdr">
-          <div class="addcombohdrtxt">Cobination List</div>
-         </div>
-         <div class="addCombotabCont">
-          <div id="createmmmrecom" class="addCombotabs addcomboaactive">MMM Recommended Combinations</div>
-          <div id="createmycombo" class="addCombotabs">My Combinations</div>
-         </div>
-         <div id="createMMMrecocont" class="addcombCont">
-          <ul class="list-group addcomboListhdr">
-            <li class="createcombolist"><div class="addcreatecombotext">this a new combination</div>
-            </li>
-            <li class="createcombolist"><div class="addcreatecombotext">this a new combination</div>
-            </li>
-            <li class="createcombolist"><div  class="addcreatecombotext">this a new combination</div>
-            </li>
-            <li class="createcombolist"><div  class="addcreatecombotext">this a new combination</div>
-            </li>
-          </ul>
-         </div>
-         <div id="createmycombocont" class="addcombCont">
-         <ul class="list-group addcomboListhdr">
-            <li class="createcombolist">
-             <div  class="addcreatecombotext">urbun large</div>
-             <i class="glyphicon glyphicon-pencil createedit pencilright"></i>
-             <i class="glyphicon glyphicon-remove createedit"></i>
-             <div class="createcomboeditcont" >
-              <div class="create_combo_edit_hdr">
-                <div class="create_cobo_cancel">Cancel</div>
-                <div class="create_combo_edit_hdr_txt">Edit Cobination</div>
-                <button id="saveCombo" class="btn flo_rit gren">Save</button>
-              </div>  
-              <input style="width:100%;border-radius: 10px;margin-top:5px;" type="text" placeholder="urbun large">
-              <div class="create_combo_sltr_cont">
-              
-              </div>
-             </div>
-            </li>
-            <li class="createcombolist">
-             <div  class="addcreatecombotext">rrural small pack</div>
-             <i class="glyphicon glyphicon-pencil createedit pencilright"></i>
-             <i class="glyphicon glyphicon-remove createedit"></i>
-             <div class="createcomboeditcont">
-              <div class="create_combo_edit_hdr">
-                <div class="create_cobo_cancel">Cancel</div>
-                <div class="create_combo_edit_hdr_txt">Edit Cobination</div>
-                <button id="saveCombo" class="btn flo_rit gren">Save</button>
-              </div>  
-              <input style="width:100%;border-radius: 10px;margin-top:5px;" type="text" placeholder="urbun large">
-              <div class="create_combo_sltr_cont">
-              
-              </div>
-             </div>
-            </li>
-            <li class="createcombolist">
-             <div  class="addcreatecombotext">this a new combination</div>
-             <i class="glyphicon glyphicon-pencil createedit pencilright"></i>
-             <i class="glyphicon glyphicon-remove createedit"></i>
-             <div class="createcomboeditcont">
-              <div class="create_combo_edit_hdr">
-                <div class="create_cobo_cancel">Cancel</div>
-                <div class="create_combo_edit_hdr_txt">Edit Cobination</div>
-                <button id="saveCombo" class="btn flo_rit gren">Save</button>
-              </div>  
-              <input style="width:100%;border-radius: 10px;margin-top:5px;" type="text" placeholder="urbun large">
-              <div class="create_combo_sltr_cont">
-              
-              </div>
-             </div>
-            </li>
-            <li class="createcombolist">
-             <div class="addcreatecombotext">this a new combination</div>
-             <i class="glyphicon glyphicon-pencil createedit pencilright"></i>
-             <i class="glyphicon glyphicon-remove createedit"></i>
-             <div class="createcomboeditcont">
-              <div class="create_combo_edit_hdr">
-                <div class="create_cobo_cancel">Cancel</div>
-                <div class="create_combo_edit_hdr_txt">Edit Cobination</div>
-                <button id="saveCombo" class="btn flo_rit gren">Save</button>
-              </div>  
-              <input style="width:100%;border-radius: 10px;margin-top:5px;" type="text" placeholder="urbun large">
-              <div class="create_combo_sltr_cont">
-              
-              </div>
-             </div>
-            </li>
-          </ul>
-        </div>
-       </div> 
+       <div class="createCombo">
+
        </div>
-       <div class="save_scen">
-       <div class="scen-new_name">
-        <input style="width:260px;border-radius: 10px;" type="text" placeholder="Name Your Senario"></div>
-        <div class="scen_textarea">
-          <textarea rows="4" cols="15" style="width:260px" placeholder="Description"></textarea>  
-        </div>
-       </div>
-     
+       <div id="back_blur"></div>
+      </div>
+    </div>
     <script type="text/javascript" src="assets/js/sim.js"></script>
+
 </div>
- <div id="back_blur"></div>

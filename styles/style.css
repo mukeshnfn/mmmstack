@@ -129,7 +129,6 @@
 .btn {
 	border-radius: 10px;
 	padding: 3px 5px;
-	margin-top: 5px;
 	font-size :13px;
 }
 .gren {
@@ -388,7 +387,7 @@ input[type=number]{
 .sub-eye{
 	height:80px;
 	border:solid 1px #e6e6e6;
-	
+
 }
 #back_blur{
 	height: 131%;
@@ -425,7 +424,7 @@ input[type=number]{
 	display: none;
 	width: 700px;
 	height: 350px;
-	background-color: transparent; 
+	background-color: transparent;
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -438,8 +437,8 @@ input[type=number]{
 	background-color: #fff;
 	margin-top: 0px;
 	margin-left: 0px;
-	
-	
+
+
 
 }
 .save_scen{
@@ -508,7 +507,7 @@ input[type=number]{
 }
 .addcomboaactive {
 	background-color:#25b9ff;
-	color: #fff; 
+	color: #fff;
 }
 .addcombCont{
 	width: 100%;
@@ -519,7 +518,7 @@ input[type=number]{
 	display: none;
 }
 #addMMMrecocont{
-    
+
 }
 .addcombolist{
 	padding-left: 10px;
@@ -570,7 +569,7 @@ input[type=number]{
 	display: none;
 	width: 850px;
 	height: 350px;
-	background-color: transparent; 
+	background-color: transparent;
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -654,6 +653,6 @@ input[type=number]{
 .navbar-fixed-top{
 	background-color: #fff;
 }
-::-webkit-scrollbar { 
-    display: none; 
+::-webkit-scrollbar {
+    display: none;
 }
