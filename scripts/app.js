@@ -6,7 +6,7 @@ angular
   ])
   .config(function ($routeProvider) {
     $routeProvider
-      .when('/', {
+      .when('/dashboard', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
@@ -16,13 +16,13 @@ angular
       })
       .when('/simulator', {
         templateUrl: 'views/simulator.html',
-        controller: 'ProfileCtrl'
+        controller: 'SimulatorCtrl'
       })
       .when('/scenarios', {
         templateUrl: 'views/scenarios.html',
-        controller: 'SettingsCtrl'
+        controller: 'ScenariosCtrl'
       })
-      .when('/signin', {
+      .when('/', {
         templateUrl: 'views/signin.html',
         controller: 'SigninCtrl'
       })

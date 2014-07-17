@@ -1,4 +1,4 @@
-<header class="navbar navbar-fixed-top navbar-inverse">
+<header class="navbar navbar-fixed-top navbar-inverse" ng-controller="MainCtrl">
     <div class="container-fluid head-main">
       <div class="head" style="height:60px; width:100vw;">
             <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -20,7 +20,7 @@
               Hi {{stack.ClientName}} <span class="caret"></span>
             </button>
             <ul class="dropdown-menu" role="menu">
-              <li><a href="#">Logout</a></li>
+              <li><button ng-click="logout()">Logout</button></li>
             </ul>
           </li>
         </ul>

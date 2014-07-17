@@ -9,5 +9,6 @@
  */
 angular.module('stackApp')
   .controller('SignoutCtrl', function ($scope, Authentication, $window) {
-      $window.location='#/signin';
+      return Authentication.logout();
+      $window.location='#/simulator';
 });

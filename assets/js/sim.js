@@ -23,15 +23,58 @@ $(document).ready( function(){
 	$('#back_blur').click(function(){
 		$('#back_blur').css({'display':'none'});
 		$('.eye_popup').css({'display':'none'});
-		$('.addCombo').css({'display':'none'});
-		$('.createCombo').css({'display':'none'});
+		$('.addCombocont').css({'display':'none'});
+		$('.creteCombocont').css({'display':'none'});
+		$('.save_scen').css({'display':'none'});
 	});
 	$('#AddNewCombo').click(function(){
 		$('#back_blur').css({'display':'block'});
-		$('.addCombo').css({'display':'block'});
+		$('.addCombocont').css({'display':'block'});
 	});
 	$('#CreateNewCombo').click(function(){
 		$('#back_blur').css({'display':'block'});
-		$('.createCombo').css({'display':'block'});
+		$('.creteCombocont').css({'display':'block'});
+	});
+	$('#saveScenario').click(function() {
+		var p = $("#saveScenario").position();
+		var lt =p.left;
+		var tp =p.top;
+	    $('#back_blur').css({'display':'block'});
+	    $('.save_scen').css({'display':'block'});
+	    $('.save_scen').css({'top':tp+50});
+	    $('.save_scen').css({'left':lt-200});
+	});
+	$('#addmycombo').click(function(){
+		$(this).addClass("addcomboaactive");
+		$("#addmmmrecom").removeClass("addcomboaactive");
+		$("#addmycombocont").css({"display":"block"});
+		$("#addMMMrecocont").css({"display":"none"});
+	});
+	$('#addmmmrecom').click(function(){
+		$(this).addClass("addcomboaactive");
+		$("#addmycombo").removeClass("addcomboaactive");
+		$("#addmycombocont").css({"display":"none"});
+		$("#addMMMrecocont").css({"display":"block"});
+	});
+	$('#createmmmrecom').click(function(){
+		$(this).addClass("addcomboaactive");
+		$("#createmycombo").removeClass("addcomboaactive");
+		$("#createmycombocont").css({"display":"none"});
+		$("#createMMMrecocont").css({"display":"block"});
+	});
+	$('#createmycombo').click(function(){
+		$(this).addClass("addcomboaactive");
+		$("#createmmmrecom").removeClass("addcomboaactive");
+		$("#createmycombocont").css({"display":"block"});
+		$("#createMMMrecocont").css({"display":"none"});
+	});
+	$(".addcombolist").hover(function(){
+		$(this).children(".addcombodetails").css({"display":"block"});
+	},function(){
+		$(this).children(".addcombodetails").css({"display":"none"});
+	});
+	$(".pencilright").click(function(){
+		$(".createcomboeditcont").css({"display":"none"});
+		$(this).parent().children(".createcomboeditcont").css({"display":"block"});
 	});
 });

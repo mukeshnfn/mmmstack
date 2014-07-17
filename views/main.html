@@ -12,7 +12,6 @@
               <li class="head-title title-active"><a href="#/dashboard" style="color:#fff;">Dashboard</a></li>
               <li class="head-title"><a href="#/simulator">Simulator</a></li>
               <li class="head-title"><a href="#/scenarios">My Scenarios</a></li>
-
         </ul>
         <ul class="nav navbar-nav pull-right">
           <li class="dropdown head-title">
@@ -20,7 +19,7 @@
               Hi {{stack.ClientName}} <span class="caret"></span>
             </button>
             <ul class="dropdown-menu" role="menu">
-              <li><a href="#">Logout</a></li>
+              <li><button ng-click="logout()">Logout</button></li>
             </ul>
           </li>
         </ul>

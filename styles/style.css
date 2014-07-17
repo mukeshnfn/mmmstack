@@ -157,6 +157,7 @@
 	background-color: #fff;
 	line-height: 57px;
 	text-align: center;
+	cursor: pointer;
 }
 .pro_chang_box {
 	width: 100%;
@@ -387,10 +388,10 @@ input[type=number]{
 .sub-eye{
 	height:80px;
 	border:solid 1px #e6e6e6;
-	margin-top: 10px;
+	
 }
 #back_blur{
-	height: 100%;
+	height: 131%;
 	width: 100%;
 	display: none;
 	position: absolute;
@@ -414,27 +415,245 @@ input[type=number]{
 	width: 70%;
 }
 .addCombo{
-	width: 500px;
+	width: 450px;
 	height: 350px;
 	background-color: #fff;
-	position: absolute;
-	top:50%;
-	left: 50%;
-	margin-left: -400px;
-	margin-top: -175px;
+	margin-left: 00px;
+	margin-top: 0px;
+}
+.addCombocont{
 	display: none;
+	width: 700px;
+	height: 350px;
+	background-color: transparent; 
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -300px;
 	z-index: 150;
 }
 .createCombo{
-	width: 500px;
+	width: 435px;
 	height: 350px;
 	background-color: #fff;
-	position: absolute;
-	top:50%;
-	left: 50%;
-	margin-left: -400px;
-	margin-top: -175px;
-	display: none;
-	z-index: 150;
+	margin-top: 0px;
+	margin-left: 0px;
+	
+	
 
+}
+.save_scen{
+	width:300px;
+	height: 182px;
+	background-color: #fff;
+	z-index: 150;
+	display: none;
+	border:solid 1px #000;
+	position: absolute;
+	margin-right: -300px;
+	border-radius: 10px;
+}
+.scen-new_name{
+	width: 280px;
+	margin-left: 20px;
+	margin-top: 20px;
+}
+.scen_textarea{
+	margin-left: 20px;
+}
+.pro_table th{
+   font-weight: normal;
+   padding-left: 10px;
+   text-align: center;
+   padding-bottom: 5px;
+}
+.pro_table td{
+	padding-left: 10px;
+	text-align: center;
+	padding-bottom: 3px;
+}
+.number_chang_combo{
+	float: left;
+	margin-left: 10px;
+}
+.chng-comb{
+}
+.chng-comb th{
+	padding-left: 5px;
+	text-align: center;
+}
+.chng-comb td{
+	padding: 5px;
+	text-align: center;
+	overflow: hidden;
+}
+.addCombohdr {
+   width: 100%;
+   height: 45px;
+}
+.addCombotabCont{
+	width: 100%;
+	height: 30px;
+	border-bottom: solid 1px #25b9ff;
+}
+.addCombotabs{
+	width: 50%;
+	height: 100%;
+	color: #25b9ff;
+	font-size: 13px;
+	text-align: center;
+	cursor: pointer;
+	float: left;
+	line-height: 30px;
+}
+.addcomboaactive {
+	background-color:#25b9ff;
+	color: #fff; 
+}
+.addcombCont{
+	width: 100%;
+	height: 275px;
+    overflow: scroll;
+}
+#addmycombocont{
+	display: none;
+}
+#addMMMrecocont{
+    
+}
+.addcombolist{
+	padding-left: 10px;
+	padding-top: 4px;
+	color: #444;
+}
+.createcombolist{
+	padding-left: 10px;
+	padding-top: 4px;
+	color: #444;
+}
+.createcombolist:hover {
+	background-color: #444;
+	color: #fff;
+}
+.addcombolist:hover {
+	background-color: #444;
+	color: #fff;
+}
+.addcombohdrtxt{
+	font-weight: bold;
+	font-size: 17px;
+	height: 100%;
+	line-height: 43px;
+	padding-left: 15px;width: 325px;
+}
+.addcombodetails{
+	display: none;
+	height: 300px;
+	width: 260px;
+	background-color: #fff;
+	margin-left: 453px;
+	margin-top: 0px;
+	position: absolute;
+	top:50px;
+}
+.addcomb_details_hdr{
+	width: 100%;
+	height: 35px;
+	border-bottom: solid 1px #25b9ff;
+	color: #000;
+	font-weight: bold;
+    line-height: 35px;
+    text-align: center;
+
+}
+.creteCombocont{
+	display: none;
+	width: 850px;
+	height: 350px;
+	background-color: transparent; 
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -435px;
+	z-index: 150;
+}
+.addcreatecombotext{
+	width: 300px;
+}
+.createedit{
+	float: right;
+	margin-top: -24px;
+	margin-right: 5px;
+	cursor: pointer;
+}
+.createedit:hover{
+	color: #25b9ff;
+}
+#createmycombocont{
+	display: none;
+}
+.pencilright{
+	margin-right: 35px;
+}
+.createcomboeditcont{
+	display:none;
+	position: absolute;
+	width: 400px;
+	height: 350px;
+	background-color: #fff;
+	top: 0;
+	left: 448px;
+	padding: 5px;
+}
+.create_combo_edit_hdr{
+	width: 100%;
+	height: 40px;
+	color: #444;
+	padding-top: 5px;
+}
+.create_cobo_cancel{
+	font-weight: normal;
+	font-size: 13px;
+	width: 100px;
+	float: left;
+
+}
+.create_combo_edit_hdr_txt{
+	font-size: 18px;
+	font-weight: bold;
+	width: 200px;
+	float: left;
+	text-align: center;
+}
+.create_combo_sltr_cont{
+	width: 100%;
+	border:solid 1px #c0c0c0;
+}
+.color_fade{
+	background-color: #c0c0c0;
+}
+.combo_options_cont{
+	width: 100%;
+	height: 52px;
+}
+.combo_option_shell{
+	width: 82px;
+	height: 99%;
+    float: left;
+    margin-left: 3px;
+}
+.combo_option{
+	width: 38px;
+	height: 23px;
+	float: left;
+	border: solid 1px green;
+	margin-left: 2px;
+	margin-top: 2px;
+}
+/*--------------------------------*/
+.navbar-fixed-top{
+	background-color: #fff;
+}
+::-webkit-scrollbar { 
+    display: none; 
 }

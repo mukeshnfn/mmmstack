@@ -1,1 +1,19 @@
-<p>This is the signin view.</p>
+
+<div class="row" ng-controller="SigninCtrl">
+          <div class="span5" style=" margin:0 auto;float:none;">
+                  <div id="signin">
+                    <img src="assets/img/logo.jpg" alt="Meritus"/>
+                    <h3>MMM Simulator</h3>
+
+                  	<div id="messages" class="well" ng-show="message">{{ message }}</div>
+
+                    <form ng-submit="loginUser()">
+                      <input type="text" placeholder="Username" name="UserName" ng-model="formData.UserName"/>
+                      <input type="password" placeholder="Password" ng-model="formData.Password"/>
+                      <button id="submit" type="submit">Sign in</button>
+                    </form>
+
+                   <a class="forgetPassword" href="#/forgot-password"> Forgot password ?</a>
+                  </div>
+          </div>
+</div>

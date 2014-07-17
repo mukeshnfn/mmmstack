@@ -1,48 +1,17 @@
 'use strict';
 
 angular.module('stackApp')
-  .factory('Authentication', function Authentication($q, $http, $timeout) {
+  .factory('Authentication', function Authentication($q, $http, $timeout, $rootScope) {
 
     var authenticatedUser = null;
+    var user = null;
     return  {
         requestUser: function()
         {
             var deferred = $q.defer();
-            $http.get('api/user.json').success(function(user)
-            {
-                if(user.SessionKey)
-                    {
-                      authenticatedUser = user;
-                    }
-
-                    deferred.resolve(authenticatedUser);
-
-            }).error(function(error)
-            {
-                deferred.reject(error);
-            });
-
+            user = authenticatedUser;
+            deferred.resolve(user);
             return deferred.promise;
-        },
-        logoutUser: function()
-        {
-          var apikey = '&apikey=Q6yO1lGelAEaP9cT/M3mbQ==';
-          var SessionKey = authenticatedUser.SessionKey;
-          var UserId = authenticatedUser.UserID;
-
-            $http({
-              method  : 'POST',
-              url     : 'http://apps.impetusanalytics.com/mmmstackweb/Service1.asmx/Logout',
-              data    : $.param($scope.formData)+apikey,
-              headers : { 'Content-Type': 'application/x-www-form-urlencoded' }
-          }).success(function(user)
-            {
-
-            }).error(function(error)
-            {
-                console.log("please try again");
-            });
-            authenticatedUser = null;
         },
 
         getUser: function()
@@ -62,37 +31,45 @@ angular.module('stackApp')
 
         exists: function()
         {
-            return authenticatedUser != null;
+            return authenticatedUser;
         },
 
-        login: function(credentials)
+        login: function(formData)
         {
             var deferred = $q.defer();
-
-            $http.post('/auth/login', credentials).success(function(user)
-            {
-                if(user)
-                {
-                    authenticatedUser = user;
+            var apikey = '&apikey=Q6yO1lGelAEaP9cT/M3mbQ==';
+            $http({
+                  method  : 'POST',
+                  url     : 'http://apps.impetusanalytics.com/mmmstackweb/Service1.asmx/Login',
+                  data    : formData+apikey,
+                  headers : { 'Content-Type': 'application/x-www-form-urlencoded' }
+              })
+                  .success(function(userData) {
+                    authenticatedUser = userData;
                     deferred.resolve(user);
-                }
-                else
-                {
-                    deferred.reject('Given credentials are incorrect');
-                }
-
-            }).error(function(error)
-            {
-                deferred.reject(error);
-            });
-
-            return deferred.promise;
+              });
+              return deferred.promise;
         },
 
 
         logout: function()
         {
-            authenticatedUser = null;
+            var apikey = '&apikey=Q6yO1lGelAEaP9cT/M3mbQ==';
+            var SessionKey = '&SessionKey='+authenticatedUser.SessionKey;
+            var UserId = '&UserID='+authenticatedUser.UserID;
+              $http({
+                method  : 'POST',
+                url     : 'http://apps.impetusanalytics.com/mmmstackweb/Service1.asmx/Logout',
+                data    : SessionKey+apikey+UserId,
+                headers : { 'Content-Type': 'application/x-www-form-urlencoded' }
+            }).success(function(user)
+              {
+                authenticatedUser = null;
+                console.log("Success");
+              }).error(function(error)
+              {
+                console.log("please try again");
+              });
         },
 
         isDeveloper: function()

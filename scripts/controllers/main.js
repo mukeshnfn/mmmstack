@@ -1,14 +1,17 @@
 'use strict';
 
 angular.module('stackApp')
-  .controller('MainCtrl', function ($scope, Authentication, RouteFilter) {
-        console.log(Authentication.getUser());
+  .controller('MainCtrl', function ($scope, Authentication, RouteFilter, $location) {
         $scope.stack = Authentication.getUser();
         $scope.selectedTab = 1;
         $scope.canAccess = function(route)
         {
         return RouteFilter.canAccess(route);
         }
+        $scope.logout = function () {
+          Authentication.logout();
+          $location.path('/');
+        };
 })
   .controller('allProjectsCtrl', function ($scope, Authentication, RouteFilter) {
           $scope.recentProjects = Authentication.recentProject();

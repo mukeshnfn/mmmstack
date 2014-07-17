@@ -7,14 +7,18 @@ angular.module('stackApp')
     {
         return Authentication.exists();
     }, 'signin');
+    RouteFilter.register('auth', ['/dashboard'], function()
+    {
+        return Authentication.exists();
+    }, 'signin');
 
     RouteFilter.register('guest', ['/signin'], function()
     {
-        return ! Authentication.exists();
+        return !Authentication.exists();
     }, '/');
-
-    RouteFilter.register('developer', ['/settings'], function()
-    {
-        return Authentication.isDeveloper();
-    }, '/');
+    //
+    // RouteFilter.register('developer', ['/settings'], function()
+    // {
+    //     return Authentication.isDeveloper();
+    // }, '/');
 });
