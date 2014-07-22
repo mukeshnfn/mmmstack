@@ -56,7 +56,7 @@ angular.module('stackApp')
         {
             var apikey = '&apikey=Q6yO1lGelAEaP9cT/M3mbQ==';
             var SessionKey = '&SessionKey='+authenticatedUser.SessionKey;
-            var UserId = '&UserID='+authenticatedUser.UserID;
+            var UserId = '&UserID='+authenticatedUser.userID;
               $http({
                 method  : 'POST',
                 url     : 'http://apps.impetusanalytics.com/mmmstackweb/Service1.asmx/Logout',

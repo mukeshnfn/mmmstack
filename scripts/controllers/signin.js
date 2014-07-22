@@ -1,12 +1,6 @@
 'use strict';
 
-/**
- * @ngdoc function
- * @name stackApp.controller:SigninCtrl
- * @description
- * # SigninCtrl
- * Controller of the stackApp
-**/
+
 angular.module('stackApp')
   .controller('SigninCtrl', function ($scope,$http,$window, Authentication, RouteFilter, $location) {
 
@@ -16,7 +10,7 @@ angular.module('stackApp')
         Authentication.login(formData).then(function() {
           $scope.stack = Authentication.getUser();
           console.log($scope.stack);
-          if(typeof $scope.stack.UserID  == "undefined")
+          if(typeof $scope.stack.userID  == "undefined")
           {
             $scope.message = $scope.stack;
           }
