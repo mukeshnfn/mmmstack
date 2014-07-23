@@ -654,6 +654,32 @@ input[type=number]{
 	margin-left: 2px;
 	margin-top: 2px;
 }
+.red_delete{
+	display: none;
+	position: absolute;
+	top:0;
+	left: 0;
+	background-color: red;
+	height: 100%;
+	width: 100%;
+}
+.comb_delete_cont{
+	width: 100px;
+	height: 30px;
+	margin-top: 8px;
+	float: left;
+	margin-left: 211px;
+}
+.border_btn{
+	width: 100%;
+	background-color: transparent;
+	color: #fff;
+	border:solid 1px #fff;
+
+}
+.del_name{
+	color: #fff;
+}
 /*--------------------------------*/
 .navbar-fixed-top{
 	background-color: #fff;
@@ -661,3 +687,4 @@ input[type=number]{
 ::-webkit-scrollbar {
     display: none;
 }
+
