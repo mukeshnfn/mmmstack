@@ -2,7 +2,7 @@
 
 angular
   .module('stackApp', [
-    'ngRoute','ui.utils','ui.bootstrap'
+    'ngRoute','ui.utils','ui.bootstrap','ngCookies'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -23,6 +23,10 @@ angular
         controller: 'ScenariosCtrl'
       })
       .when('/', {
+        templateUrl: 'views/signin.html',
+        controller: 'SigninCtrl'
+      })
+      .when('/signin', {
         templateUrl: 'views/signin.html',
         controller: 'SigninCtrl'
       })

@@ -8,7 +8,7 @@
           </button>
       <div class="navbar-collapse nav-collapse">
         <ul class="nav navbar-nav">
-              <li class="head-title client-logo"><a href="#/"> <img src="{{stack.LogoPath}}" width="150px;"></a></li>
+              <li class="head-title client-logo"><a href="#/dashboard"> <img src="{{stack.companyLogo}}" width="150px;"></a></li>
               <li class="head-title"><a href="#/dashboard">Dashboard</a></li>
               <li class="head-title title-active"><a href="#/simulator"  style="color:#fff;">Simulator</a></li>
               <li class="head-title"><a href="#/scenarios">My Scenarios</a></li>
@@ -17,7 +17,7 @@
         <ul class="nav navbar-nav pull-right">
           <li class="dropdown head-title">
             <button type="button" class="head-title btn dropdown-toggle">
-              Hi {{stack.ClientName}} <span class="caret"></span>
+              Hi {{stack.userName}} <span class="caret"></span>
             </button>
             <ul class="dropdown-menu" role="menu">
               <li><button ng-click="logout()">Logout</button></li>
@@ -33,7 +33,13 @@
 <link rel="stylesheet" href="styles/bootstrap-theme.css">
 <link rel="stylesheet" href="styles/style.css">
 <link rel="stylesheet" href="styles/font-awesome.min.css">
-<div class="container" >
+<link rel="stylesheet" href="styles/loader.css">
+<ul class="loader" ng-hide="loaded">
+	<li class="load"></li>
+	<li class="load"></li>
+	<li class="load"></li>
+</ul>
+<div class="container" ng-show="loaded">
     <div class="container" style=" margin:100px auto;float:none;">
         <div class="container">
        <div class="row header_cont">
@@ -133,7 +139,7 @@
                      <div class="combo_option_shell"></div>
                      <div class="combo_option_shell"></div>
                      <div class="combo_option_shell"></div>
-                     <div class="combo_option_shell"></div>                   
+                     <div class="combo_option_shell"></div>
                   </div>
                 </div>
               </div>
@@ -402,7 +408,7 @@
                   <td>2.1%</td>
                 </tr>
               </table>
-                
+
             </div>
             <div id="chang_cont" class="pro_chang_box">
               <table class="chng-comb">
@@ -561,10 +567,10 @@
                 <div class="create_cobo_cancel">Cancel</div>
                 <div class="create_combo_edit_hdr_txt">Edit Cobination</div>
                 <button id="saveCombo" class="btn flo_rit gren">Save</button>
-              </div>  
+              </div>
               <input style="width:100%;border-radius: 10px;margin-top:5px;" type="text" placeholder="urbun large">
               <div class="create_combo_sltr_cont">
-              
+
               </div>
              </div>
             </li>
@@ -577,10 +583,10 @@
                 <div class="create_cobo_cancel">Cancel</div>
                 <div class="create_combo_edit_hdr_txt">Edit Cobination</div>
                 <button id="saveCombo" class="btn flo_rit gren">Save</button>
-              </div>  
+              </div>
               <input style="width:100%;border-radius: 10px;margin-top:5px;" type="text" placeholder="urbun large">
               <div class="create_combo_sltr_cont">
-              
+
               </div>
              </div>
             </li>
@@ -593,10 +599,10 @@
                 <div class="create_cobo_cancel">Cancel</div>
                 <div class="create_combo_edit_hdr_txt">Edit Cobination</div>
                 <button id="saveCombo" class="btn flo_rit gren">Save</button>
-              </div>  
+              </div>
               <input style="width:100%;border-radius: 10px;margin-top:5px;" type="text" placeholder="urbun large">
               <div class="create_combo_sltr_cont">
-              
+
               </div>
              </div>
             </li>
@@ -609,25 +615,25 @@
                 <div class="create_cobo_cancel">Cancel</div>
                 <div class="create_combo_edit_hdr_txt">Edit Cobination</div>
                 <button id="saveCombo" class="btn flo_rit gren">Save</button>
-              </div>  
+              </div>
               <input style="width:100%;border-radius: 10px;margin-top:5px;" type="text" placeholder="urbun large">
               <div class="create_combo_sltr_cont">
-              
+
               </div>
              </div>
             </li>
           </ul>
         </div>
-       </div> 
+       </div>
        </div>
        <div class="save_scen">
        <div class="scen-new_name">
         <input style="width:260px;border-radius: 10px;" type="text" placeholder="Name Your Senario"></div>
         <div class="scen_textarea">
-          <textarea rows="4" cols="15" style="width:260px" placeholder="Description"></textarea>  
+          <textarea rows="4" cols="15" style="width:260px" placeholder="Description"></textarea>
         </div>
        </div>
-     
+
     <script type="text/javascript" src="assets/js/sim.js"></script>
 </div>
  <div id="back_blur"></div>

@@ -1,17 +1,42 @@
 'use strict';
 
 angular.module('stackApp')
-  .factory('Authentication', function Authentication($q, $http, $timeout, $rootScope) {
+  .factory('Authentication', function Authentication($q, $http, $timeout,$cookieStore, $cookies, $rootScope) {
 
     var authenticatedUser = null;
     var user = null;
     return  {
         requestUser: function()
         {
-            var deferred = $q.defer();
-            user = authenticatedUser;
-            deferred.resolve(user);
+            if($cookies.sessionKey  !== "undefined")
+            {
+              var deferred = $q.defer();
+              var sessionCookie = $cookies.sessionKey;
+              console.log(sessionCookie);
+              var apikey = '&apikey=Q6yO1lGelAEaP9cT/M3mbQ==';
+              var sessionKey = '&sessionKey='+sessionCookie;
+              $http({
+                    method  : 'POST',
+                    url     : 'http://apps.impetusanalytics.com/mmmstackweb/Service1.asmx/Dashboard',
+                    data    : apikey+sessionKey,
+                    headers : { 'Content-Type': 'application/x-www-form-urlencoded' }
+                })
+                    .success(function(userData) {
+                      authenticatedUser = userData;
+                      console.log(authenticatedUser);
+                      $cookieStore.put('sessionKey', authenticatedUser.sessionKey);
+                      deferred.resolve(authenticatedUser);
+                });
+            }
+            else
+            {
+              var deferred = $q.defer();
+              console.log("No session key found!");
+              deferred.resolve(authenticatedUser);
+              // return deferred.promise;
+            }
             return deferred.promise;
+
         },
 
         getUser: function()
@@ -31,7 +56,13 @@ angular.module('stackApp')
 
         exists: function()
         {
+          if ($cookies.sessionKey) {
             return authenticatedUser;
+          }
+          else{
+            return false;
+
+          }
         },
 
         login: function(formData)
@@ -46,7 +77,9 @@ angular.module('stackApp')
               })
                   .success(function(userData) {
                     authenticatedUser = userData;
-                    deferred.resolve(user);
+                    $cookieStore.put('sessionKey', authenticatedUser.sessionKey);
+                    $cookies.sessionKey = authenticatedUser.sessionKey;
+                    deferred.resolve(authenticatedUser);
               });
               return deferred.promise;
         },
@@ -55,7 +88,7 @@ angular.module('stackApp')
         logout: function()
         {
             var apikey = '&apikey=Q6yO1lGelAEaP9cT/M3mbQ==';
-            var SessionKey = '&SessionKey='+authenticatedUser.SessionKey;
+            var SessionKey = '&SessionKey='+authenticatedUser.sessionKey;
             var UserId = '&UserID='+authenticatedUser.userID;
               $http({
                 method  : 'POST',
@@ -65,6 +98,7 @@ angular.module('stackApp')
             }).success(function(user)
               {
                 authenticatedUser = null;
+                $cookieStore.remove('SessionKey');
                 console.log("Success");
               }).error(function(error)
               {
