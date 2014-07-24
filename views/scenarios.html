@@ -27,83 +27,41 @@
     </div>
     </div>
 </header>
-<div class="container">
+<link rel="stylesheet" href="styles/loader.css">
+<ul class="loader" ng-hide="loaded">
+  <li class="load"></li>
+  <li class="load"></li>
+  <li class="load"></li>
+</ul>
+<div class="container" ng-show="loaded">
         <div class="container" style=" margin:100px auto;float:none;">
           <div class="row filter-panel">
             <div class="span12 filters">
                 <h4><strong>Saved Scenarios</strong></h4>
             </div>
           </div>
-          <div class="row list-panel">
+          <div class="row list-panel" ng-show="load">
             <div class="span12 lists no-margin">
-                <div class="scenario span12">
+                <div class="scenario span12" ng-repeat="scenario in scenarios" >
                     <div class="scenario-content">
                         <div class="span12">
-                          <h4>Scenario 1</h4>
+                          <h4>{{scenario.title}}</h4>
                         </div>
                         <div class="span8">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <p>{{scenario.desc}}</p>
                         </div>
                         <div class="span4">
-                          <div class="scenario-load">
-                            <button class="btn-success" onclick="window.location.href='#/simulator'">Load</button>
+                          <div class="scenario-load" ng-hide="load">
+                            <button class="btn-success" onclick="window.location.href='#/simulator'">{{load}}</button>
                           </div>
                         </div>
                     </div>
                 </div>
-                <div class="scenario span12">
-                    <div class="scenario-content">
-                        <div class="span12">
-                          <h4>Scenario 1</h4>
-                        </div>
-                        <div class="span8">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        </div>
-                        <div class="span4">
-                          <div class="scenario-load">
-                            <button class="btn-success" onclick="window.location.href='#/simulator'">Load</button>
-                          </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="scenario span12">
-                    <div class="scenario-content">
-                        <div class="span12">
-                          <h4>Scenario 1</h4>
-                        </div>
-                        <div class="span8">
-                            <p>Lorem ipsum dolor sit amet, consectetur
-                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.ipsum dolor sit amet, consectetur
-                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        </div>
-                        <div class="span4">
-                          <div class="scenario-load">
-                            <button class="btn-success" onclick="window.location.href='#/simulator'">Load</button>
-                          </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="scenario span12">
-                    <div class="scenario-content">
-                        <div class="span12">
-                          <h4>Scenario 1</h4>
-                        </div>
-                        <div class="span8">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        </div>
-                        <div class="span4">
-                          <div class="scenario-load">
-                            <button class="btn-success" onclick="window.location.href='#/simulator'">Load</button>
-                          </div>
-                        </div>
-                    </div>
-                </div>
+
+              <div class="row">
+                <h4>No Scenarios available.</h4>
+              </div>
+
             </div>
           </div>
         </div>

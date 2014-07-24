@@ -42,7 +42,7 @@
                typeahead-loading="loadingLocations"
                class="form-control" ng-click="tabs[1].active = true">
               <i ng-show="loadingLocations" class="glyphicon glyphicon-refresh"></i> -->
-              <select ng-model="projectCountry" ng-click="tabs[1].active = true" ng-options="country.CountryName for country in projects | unique:'CountryName'"><option value="">Country</option></select>
+              <select ng-model="projectCountry" ng-click="tabs[1].active = true" ng-options="country.CountryName for country in projects | unique:'CountryName'"><option value="">{{stack.col1}}</option></select>
             </section>
             </div>
             <div class="span3 no-mar">
@@ -52,7 +52,7 @@
                  typeahead-loading="loadingLocations"
                  class="form-control" ng-click="tabs[1].active = true">
                 <i ng-show="loadingLocations" class="glyphicon glyphicon-refresh"></i> -->
-                <select ng-model="projectCatagory" ng-click="tabs[1].active = true" ng-options="country.Catagory for country in projects | unique:'Catagory' | filter:$viewValue"><option value="">Catagory</option></select>
+                <select ng-model="projectCatagory" ng-click="tabs[1].active = true" ng-options="country.Catagory for country in projects | unique:'Catagory' | filter:$viewValue"><option value="">{{stack.col2}}</option></select>
               </section>
             </div>
             <div class="span3 no-mar">
@@ -60,7 +60,7 @@
                 <!-- <input type="text" ng-model="prj.pro" autocomplete="off" placeholder="Project" typeahead="country as country.Project for country in projects | unique:'Project' | filter:$viewValue"
                  typeahead-loading="loadingLocations" class="form-control" ng-click="tabs[1].active = true">
                  <i ng-show="loadingLocations" class="glyphicon glyphicon-refresh"></i> -->
-                  <select ng-model="MainProject" ng-click="tabs[1].active = true" ng-options="country.Project for country in projects | unique:'Project' | filter:$viewValue"><option value="">Project</option></select>
+                  <select ng-model="MainProject" ng-click="tabs[1].active = true" ng-options="country.Project for country in projects | unique:'Project' | filter:$viewValue"><option value="">{{stack.col3}}</option></select>
               </section>
             </div>
             <div class="span3 no-mar">
@@ -68,7 +68,7 @@
                 <!-- <input type="text"
                  ng-model="prj.subpro" autocomplete="off" placeholder="Sub Project" typeahead="country as country.SubProject for country in projects | unique:'SubProject'"
                  typeahead-loading="loadingLocations"  class="form-control" ng-click="tabs[1].active = true"><i ng-show="loadingLocations" class="glyphicon glyphicon-refresh"></i> -->
-                 <select ng-model="SubProject" ng-click="tabs[1].active = true" ng-options="country.SubProject for country in projects | unique:'SubProject' | filter:$viewValue"><option value="">Sub Project</option></select>
+                 <select ng-model="SubProject" ng-click="tabs[1].active = true" ng-options="country.SubProject for country in projects | unique:'SubProject' | filter:$viewValue"><option value="">{{stack.col4}}</option></select>
               </section>
             </div>
           </div>
